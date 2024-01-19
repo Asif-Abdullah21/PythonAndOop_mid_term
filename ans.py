@@ -70,9 +70,9 @@ movie = Star_Cinema()
 hall = Hall(5,10,15)
 movie.entry_hall(hall)
 
-hall.entry_show("185", "The Lion of the Desert", "3:00 PM - 23/01/2024")
-hall.entry_show("186", "Reign of Love", "6:00 PM - 23/01/2024")
-hall.entry_show("187", "The Fateful Day", "9:00 PM - 23/01/2024")
+hall.entry_show("ID: 185", "Movie name: The Lion of the Desert", "Time: 3:00 PM - 23/01/2024")
+hall.entry_show("ID: 186", "Movie name: Reign of Love", "Time: 6:00 PM - 23/01/2024")
+hall.entry_show("ID: 187", "Movie name: The Fateful Day", "Time: 9:00 PM - 23/01/2024")
 
 while True:
     print()
@@ -84,9 +84,7 @@ while True:
 
     op = int(input("Choose an option please: "))
 
-    if(op<1 or op >4):
-        print("\n Invalid option! Try again with a valid option.\n")
-    elif op == 1:
+    if op == 1:
         for movies in movie.list_Of_hall:
             movies.view_show_list()
     elif op == 2:
@@ -107,7 +105,6 @@ while True:
 
     elif op == 4:
         break
-
-
-
-
+    else:
+        print()
+        print('You have choosen invalid option. Please give a valid option and try again.')
